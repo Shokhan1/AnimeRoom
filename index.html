@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniHouse</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #1c1c1c;
+            color: #d3d3d3;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 10px 20px;
+            background: #333;
+        }
+
+        .header img {
+            height: 50px;
+        }
+        
+        .header .title {
+            font-size: 2em;
+            color: #ffd700;
+        }
+
+        .content {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 20px;
+        }
+
+        .sidebar {
+            width: 200px;
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .sidebar h2 {
+            font-size: 1.2em;
+            color: #ffd700;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
+        .sidebar ul li a {
+            color: #d3d3d3;
+            text-decoration: none;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            margin-left: 20px;
+            background: #262626;
+            border-radius: 10px;
+        }
+
+        .anime-item {
+            width: 200px;
+            background: #444;
+            margin: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .anime-item img {
+            width: 100%;
+            border-bottom: 1px solid #333;
+        }
+
+        .anime-item .info {
+            padding: 10px;
+        }
+
+        .anime-item .title {
+            font-size: 1.1em;
+            color: #ffd700;
+        }
+        
+        .anime-item .details {
+            font-size: 0.9em;
+            color: #d3d3d3;
+        }
+        
+        .dws {
+    margin-bottom: 10px; /* Отступ между кнопками */
+}
+
+.butt {
+    border: 0;
+    font-size: 20px;
+    color: #ffd700;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%; /* Занимает всю ширину родителя */
+    height: 60px;
+    display: block;
+    text-align: center;
+    line-height: 60px;
+    font-family: Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+    background: #444; /* Цвет фона для видимости анимации */
+    transition: color 0.5s;
+}
+
+.butt::before,
+.butt::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #ffd700;
+    top: 0;
+    left: -100%;
+    opacity: 0.5;
+    transition: left 0.3s, opacity 0.3s;
+    z-index: -1;
+}
+    
+.butt::after {
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+
+.butt:hover {
+    color: #000000fe;
+    background-color: #ffd700;
+    transform: scale(1.1);
+}
+
+.butt:hover::before,
+.butt:hover::after {
+    left: 0;
+}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">AniROOM</div>
+        <img src="смайл.jpg" alt="Logo">
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="sidebar">
+                <h2>Навигация по сайту</h2>
+                    <div class="dws">
+                        <a href="best-anime.html" class="butt">лучшие Аниме</a>
+                    </div>
+                    <div class="dws">
+                        <a href="support.html" class="butt">тех.поддержка</a>
+                    </div>
+                    <div class="dws">
+                        <a href="support copy.html" class="butt">жалоба</a>
+                    </div>
+                    <div class="dws">
+                        <a href="TITRY.html" class="butt">от Автора</a>
+                    </div>
+            </div>
+            <div class="main-content">
+                <div class="anime-item">
+                    <a href="OVERLORDs .html">
+                        <img src="cocytus-overlord-crossdress-horns-demiurge-overlord-wallpaper-preview.jpg" alt="OVERLORD">
+                    </a>
+                    <div class="info">
+                        <div class="title">OVERLORD</div>
+                        <div class="details">1 сезонов<br>3 серий<br>0 фильмов</div>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <a href="Alkhimik.html">
+                        <img src="Без названия (10).jpeg" alt="Стальной алхимик">
+                    </a>
+                    <div class="info">
+                        <div class="title">Стальной алхимик</div>
+                        <div class="details">0 сезона<br>0 серий<br>0 фильма</div>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <a href="Naruto.html">
+                        <img src="images (2).jpeg" alt="Наруто">
+                    </a>
+                    <div class="info">
+                        <div class="title">Наруто</div>
+                        <div class="details">0 сезона<br>0 серии<br>0 фильмов</div>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <a href="Vanpis.html">
+                        <img src="Без названия (9).jpeg" alt="Ванпис">
+                    </a>
+                    <div class="info">
+                        <div class="title">Ванпис</div>
+                        <div class="details">0 сезона<br>0 серий</div>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <a href="Vanpanches .html">
+                        <img src="Без названия (8).jpeg" alt="Ванпанчмен">
+                    </a>
+                    <div class="info">
+                        <div class="title">Ванпанчмен</div>
+                        <div class="details">1 сезонов<br>1 серий<br>0 фильма</div>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <a href="Klinok.html">
+                        <img src="Без названия (11).jpeg" alt="Клинок, рассекающий демонов">
+                    </a>
+                    <div class="info">
+                        <div class="title">Клинок, рассекающий демонов</div>
+                        <div class="details">1 сезона<br>1 серии<br>0 фильм</div>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <a href="#">
+                        <img src="мем аристократа.jpg" alt="">
+                    </a>
+                    <div class="info">
+                        <div class="title">СКОРО</div>
+                        <div class="details">0 сезон<br>0 серий<br>0 фильм</div>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <a href="#">
+                        <img src="мем аристократа.jpg" alt="">
+                    </a>
+                    <div class="info">
+                        <div class="title">СКОРО</div>
+                        <div class="details">0 сезон<br>0 серий<br>0 фильм</div>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <a href="#">
+                        <img src="мем аристократа.jpg" alt="">
+                    </a>
+                    <div class="info">
+                        <div class="title">СКОРО</div>
+                        <div class="details">0 сезон<br>0 серий<br>0 фильм</div>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <a href="#">
+                        <img src="мем аристократа.jpg" alt="">
+                    </a>
+                    <div class="info">
+                        <div class="title">СКОРО</div>
+                        <div class="details">0 сезон<br>0 серий<br>0 фильм</div>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <a href="#">
+                        <img src="мем аристократа.jpg" alt="">
+                    </a>
+                    <div class="info">
+                        <div class="title">СКОРО</div>
+                        <div class="details">0 сезон<br>0 серий<br>0 фильм</div>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <a href="#">
+                        <img src="мем аристократа.jpg" alt="">
+                    </a>
+                    <div class="info">
+                        <div class="title">СКОРО</div>
+                        <div class="details">0 сезон<br>0 серий<br>0 фильм</div>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <a href="#">
+                        <img src="мем аристократа.jpg" alt="">
+                    </a>
+                    <div class="info">
+                        <div class="title">СКОРО</div>
+                        <div class="details">0 сезон<br>0 серий<br>0 фильм</div>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <a href="#">
+                        <img src="мем аристократа.jpg" alt="">
+                    </a>
+                    <div class="info">
+                        <div class="title">СКОРО</div>
+                        <div class="details">0 сезон<br>0 серий<br>0 фильм</div>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <a href="#">
+                        <img src="мем аристократа.jpg" alt="">
+                    </a>
+                    <div class="info">
+                        <div class="title">СКОРО</div>
+                        <div class="details">0 сезон<br>0 серий<br>0 фильм</div>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <a href="#">
+                        <img src="мем аристократа.jpg" alt="">
+                    </a>
+                    <div class="info">
+                        <div class="title">СКОРО</div>
+                        <div class="details">0 сезон<br>0 серий<br>0 фильм</div>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <a href="#">
+                        <img src="мем аристократа.jpg" alt="">
+                    </a>
+                    <div class="info">
+                        <div class="title">СКОРО</div>
+                        <div class="details">0 сезон<br>0 серий<br>0 фильм</div>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <a href="#">
+                        <img src="мем аристократа.jpg" alt="">
+                    </a>
+                    <div class="info">
+                        <div class="title">СКОРО</div>
+                        <div class="details">0 сезон<br>0 серий<br>0 фильм</div>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <a href="#">
+                        <img src="мем аристократа.jpg" alt="">
+                    </a>
+                    <div class="info">
+                        <div class="title">СКОРО</div>
+                        <div class="details">0 сезон<br>0 серий<br>0 фильм</div>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <a href="#">
+                        <img src="мем аристократа.jpg" alt="">
+                    </a>
+                    <div class="info">
+                        <div class="title">СКОРО</div>
+                        <div class="details">0 сезон<br>0 серий<br>0 фильм</div>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <a href="#">
+                        <img src="мем аристократа.jpg" alt="">
+                    </a>
+                    <div class="info">
+                        <div class="title">СКОРО</div>
+                        <div class="details">0 сезон<br>0 серий<br>0 фильм</div>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <a href="#">
+                        <img src="мем аристократа.jpg" alt="">
+                    </a>
+                    <div class="info">
+                        <div class="title">СКОРО</div>
+                        <div class="details">0 сезон<br>0 серий<br>0 фильм</div>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <a href="#">
+                        <img src="мем аристократа.jpg" alt="">
+                    </a>
+                    <div class="info">
+                        <div class="title">СКОРО</div>
+                        <div class="details">0 сезон<br>0 серий<br>0 фильм</div>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <a href="#">
+                        <img src="мем аристократа.jpg" alt="">
+                    </a>
+                    <div class="info">
+                        <div class="title">СКОРО</div>
+                        <div class="details">0 сезон<br>0 серий<br>0 фильм</div>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <a href="#">
+                        <img src="мем аристократа.jpg" alt="">
+                    </a>
+                    <div class="info">
+                        <div class="title">СКОРО</div>
+                        <div class="details">0 сезон<br>0 серий<br>0 фильм</div>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <a href="#">
+                        <img src="мем аристократа.jpg" alt="">
+                    </a>
+                    <div class="info">
+                        <div class="title">СКОРО</div>
+                        <div class="details">0 сезон<br>0 серий<br>0 фильм</div>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <a href="#">
+                        <img src="мем аристократа.jpg" alt="">
+                    </a>
+                    <div class="info">
+                        <div class="title">СКОРО</div>
+                        <div class="details">0 сезон<br>0 серий<br>0 фильм</div>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <a href="#">
+                        <img src="мем аристократа.jpg" alt="">
+                    </a>
+                    <div class="info">
+                        <div class="title">СКОРО</div>
+                        <div class="details">0 сезон<br>0 серий<br>0 фильмов</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

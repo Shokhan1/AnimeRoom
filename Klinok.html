@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Просмотр Аниме</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #1c1c1c;
+            color: #d3d3d3;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #333;
+            color: #ffd700;
+        }
+
+        header .logo {
+            font-size: 2em;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #d3d3d3;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .video-container {
+            width: 80%;
+            max-width: 800px;
+            background: #262626;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .video-container h1 {
+            font-size: 1.5em;
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+
+        video {
+            width: 100%;
+            border: 1px solid #333;
+            border-radius: 10px;
+        }
+
+        .video-description {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .navigation-buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navigation-buttons button {
+            padding: 10px 20px;
+            background: #ffd700;
+            color: #1c1c1c;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .navigation-buttons button:hover {
+            background: #e5c700;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #d3d3d3;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">AniROOM</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="best-anime.html">лучшие Аниме</a></li>
+                <li><a href="support copy.html">жалоба</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="video-container">
+            <h1>Название: OVERLORD - Серия 1</h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/a0Aan6bd_O0?si=0cTx_mDDTlSgiIUI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="video-description">
+                <p>Описание: игрок который играл 5 лет без остоновки с товарищами осталься один и в игре и попал в игру</p>
+            </div>
+            <div class="navigation-buttons">
+                <button onclick="location.href='support.html'">тех.поддержка</button>
+                <button>Следующая серия СКОРО!</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 AniHouse. Все права защищены.</p>
+    </footer>
+</body>
+</html>
